@@ -33,17 +33,30 @@
 
     <div style="width: 60vw;margin-left: 13vw;text-align:center;height: 3px;background-color: gray;"></div>
 
+
     <div style="margin-top: 50px;margin-left: 30vw;width: 30vw;font-weight: bold">
-      <el-input placeholder="请输入内容" v-model="input3">
-        <template slot="prepend">学号：</template>
+      <el-input placeholder="请输入邮箱" v-model="email">
+        <template slot="prepend">邮箱：</template>
       </el-input>
     </div>
 
     <div style="margin-top: 30px;margin-left: 30vw;width: 30vw;font-weight: bold">
-      <el-input placeholder="请输入内容" v-model="input3">
-        <template slot="prepend">密码：</template>
+      <el-input placeholder="请输入密码" v-model="password" type="password">
+        <template slot="prepend" >密码：</template>
       </el-input>
     </div>
+
+
+    <el-row style="margin-top:30px;margin-left:36vw;text-align: center">
+      <el-col :span="4">
+        <el-button type="primary">登录</el-button>
+      </el-col>
+
+      <el-col :span="4">
+        <el-button type="warning" @click="register">注册</el-button>
+      </el-col>
+
+    </el-row>
 
 
 
@@ -59,9 +72,18 @@
   export default {
     name: 'landing-page',
     components: { SystemInformation },
+    data: function () {
+      return {
+        email: '',
+        password: ''
+      }
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
+      },
+      register () {
+        this.$emit('child-say', '2')
       }
     }
   }

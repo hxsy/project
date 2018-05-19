@@ -5,10 +5,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      name: 'welcome-page',
+      component: require('@/components/WelcomePage.vue').default
     },
     {
       path: '*',
