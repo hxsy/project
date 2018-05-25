@@ -9,25 +9,23 @@
 </el-radio-group>
 <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
 
-        <el-menu-item index="1">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
-        </el-menu-item>
-        <el-menu-item index="2">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
-        </el-menu-item>
+    <el-menu-item index="1">
+        <i class="el-icon-document"></i>
+        <span slot="title">签到管理</span>
+    </el-menu-item>
+    <el-menu-item index="2">
+        <i class="el-icon-bell"></i>
+        <span slot="title">迟到请假</span>
+    </el-menu-item>
     <el-menu-item index="3">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
+        <i class="el-icon-edit"></i>
+        <span slot="title">信息修改</span>
     </el-menu-item>
-    <el-menu-item index="4">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-    </el-menu-item>
-    <el-menu-item index="5" @click="exit">
-        <i class="el-icon-menu"></i>
+
+    <el-menu-item index="4" @click="exit">
+        <i class="el-icon-d-arrow-left" aria-hidden="true"></i>
         <span slot="title">安全退出</span>
+
     </el-menu-item>
 </el-menu>
 </div>
@@ -35,12 +33,14 @@
 
 <style>
     .el-menu-vertical-demo:not(.el-menu--collapse) {
-        width: 200px;
-        min-height: 400px;
+        width: 150px;
+        min-height: 80vh;
     }
 </style>
 
 <script>
+  import 'bootstrap/dist/css/bootstrap.min.css'
+  import 'bootstrap/dist/js/bootstrap.min'
   export default {
     data () {
       return {
