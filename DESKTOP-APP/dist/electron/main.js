@@ -4107,47 +4107,47 @@ var install = function install(extensionReference) {
 exports.default = install;
 var EMBER_INSPECTOR = exports.EMBER_INSPECTOR = {
   id: 'bmdblncegkenkacieihfhpjfppoconhi',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var REACT_DEVELOPER_TOOLS = exports.REACT_DEVELOPER_TOOLS = {
   id: 'fmkadmapgofadopljbjfkapdkoienihi',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var BACKBONE_DEBUGGER = exports.BACKBONE_DEBUGGER = {
   id: 'bhljhndlimiafopmmhjlgfpnnchjjbhd',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var JQUERY_DEBUGGER = exports.JQUERY_DEBUGGER = {
   id: 'dbhhnnnpaeobfddmlalhnehgclcmjimi',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var ANGULARJS_BATARANG = exports.ANGULARJS_BATARANG = {
   id: 'ighdmehidhipcmcojjgiloacoafjmpfk',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var VUEJS_DEVTOOLS = exports.VUEJS_DEVTOOLS = {
   id: 'nhdogjmejiglipccpnnnanhbledajbpd',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var REDUX_DEVTOOLS = exports.REDUX_DEVTOOLS = {
   id: 'lmhkpmbekcpmknklioeibfkpmmfibljd',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var REACT_PERF = exports.REACT_PERF = {
   id: 'hacmcodfllhbnekmghgdlplbdnahmhmm',
-  electron: '^1.2.6'
+  electron: '>=1.2.6'
 };
 var CYCLEJS_DEVTOOL = exports.CYCLEJS_DEVTOOL = {
   id: 'dfgplfmhhmdekalbpejekgfegkonjpfp',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var APOLLO_DEVELOPER_TOOLS = exports.APOLLO_DEVELOPER_TOOLS = {
   id: 'jdkknkkbebbapilgoeccciglkfbmbnfm',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 var MOBX_DEVTOOLS = exports.MOBX_DEVTOOLS = {
   id: 'pfgnfdagidkfgccljigdamigbcnndkod',
-  electron: '^1.2.1'
+  electron: '>=1.2.1'
 };
 
 /***/ }),

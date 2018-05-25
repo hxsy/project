@@ -31,25 +31,25 @@
 
     <div style="margin: 0 0;text-align: center;font-size: 50px;font-weight: bold;color: darkcyan;">签到秘书</div>
 
-    <div style="width: 60vw;margin-left: 13vw;text-align:center;height: 3px;background-color: gray;"></div>
+    <div style="width: 60vw;margin-left: 20vw;text-align:center;height: 3px;background-color: gray;"></div>
 
 
-    <div style="margin-top: 50px;margin-left: 30vw;width: 30vw;font-weight: bold">
+    <div style="margin-top: 50px;margin-left: 35vw;width: 30vw;font-weight: bold">
       <el-input placeholder="请输入邮箱" v-model="email">
         <template slot="prepend">邮箱：</template>
       </el-input>
     </div>
 
-    <div style="margin-top: 30px;margin-left: 30vw;width: 30vw;font-weight: bold">
+    <div style="margin-top: 30px;margin-left: 35vw;width: 30vw;font-weight: bold">
       <el-input placeholder="请输入密码" v-model="password" type="password">
         <template slot="prepend" >密码：</template>
       </el-input>
     </div>
 
 
-    <el-row style="margin-top:30px;margin-left:36vw;text-align: center">
+    <el-row style="margin-top:30px;margin-left:40vw;text-align: center">
       <el-col :span="4">
-        <el-button type="primary">登录</el-button>
+        <el-button type="primary" @click="login">登录</el-button>
       </el-col>
 
       <el-col :span="4">
@@ -84,91 +84,94 @@
       },
       register () {
         this.$emit('child-say', '2')
+      },
+      login () {
+        this.$emit('to-home', '3')
       }
     }
   }
 </script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+<!--<style>-->
+  <!--@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');-->
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  <!--* {-->
+    <!--box-sizing: border-box;-->
+    <!--margin: 0;-->
+    <!--padding: 0;-->
+  <!--}-->
 
-  body { font-family: 'Source Sans Pro', sans-serif; }
+  <!--body { font-family: 'Source Sans Pro', sans-serif; }-->
 
-  #wrapper {
-    background:
-      radial-gradient(
-        ellipse at top left,
-        rgba(255, 255, 255, 1) 40%,
-        rgba(229, 229, 229, .9) 100%
-      );
-    height: 100vh;
-    padding: 60px 80px;
-    width: 100vw;
-  }
+  <!--/*#wrapper {*/-->
+    <!--/*background:*/-->
+      <!--/*radial-gradient(*/-->
+        <!--/*ellipse at top left,*/-->
+        <!--/*rgba(255, 255, 255, 1) 40%,*/-->
+        <!--/*rgba(229, 229, 229, .9) 100%*/-->
+      <!--/*);*/-->
+    <!--/*height: 100vh;*/-->
+    <!--/*padding: 60px 80px;*/-->
+    <!--/*width: 100vw;*/-->
+  <!--/*}*/-->
 
-  #logo {
-    height: auto;
-    margin-bottom: 20px;
-    width: 420px;
-  }
+  <!--#logo {-->
+    <!--height: auto;-->
+    <!--margin-bottom: 20px;-->
+    <!--width: 420px;-->
+  <!--}-->
 
-  main {
-    display: flex;
-    justify-content: space-between;
-  }
+  <!--main {-->
+    <!--display: flex;-->
+    <!--justify-content: space-between;-->
+  <!--}-->
 
-  main > div { flex-basis: 50%; }
+  <!--main > div { flex-basis: 50%; }-->
 
-  .left-side {
-    display: flex;
-    flex-direction: column;
-  }
+  <!--.left-side {-->
+    <!--display: flex;-->
+    <!--flex-direction: column;-->
+  <!--}-->
 
-  .welcome {
-    color: #555;
-    font-size: 23px;
-    margin-bottom: 10px;
-  }
+  <!--.welcome {-->
+    <!--color: #555;-->
+    <!--font-size: 23px;-->
+    <!--margin-bottom: 10px;-->
+  <!--}-->
 
-  .title {
-    color: #2c3e50;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 6px;
-  }
+  <!--.title {-->
+    <!--color: #2c3e50;-->
+    <!--font-size: 20px;-->
+    <!--font-weight: bold;-->
+    <!--margin-bottom: 6px;-->
+  <!--}-->
 
-  .title.alt {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+  <!--.title.alt {-->
+    <!--font-size: 18px;-->
+    <!--margin-bottom: 10px;-->
+  <!--}-->
 
-  .doc p {
-    color: black;
-    margin-bottom: 10px;
-  }
+  <!--.doc p {-->
+    <!--color: black;-->
+    <!--margin-bottom: 10px;-->
+  <!--}-->
 
-  .doc button {
-    font-size: .8em;
-    cursor: pointer;
-    outline: none;
-    padding: 0.75em 2em;
-    border-radius: 2em;
-    display: inline-block;
-    color: #fff;
-    background-color: #4fc08d;
-    transition: all 0.15s ease;
-    box-sizing: border-box;
-    border: 1px solid #4fc08d;
-  }
+  <!--.doc button {-->
+    <!--font-size: .8em;-->
+    <!--cursor: pointer;-->
+    <!--outline: none;-->
+    <!--padding: 0.75em 2em;-->
+    <!--border-radius: 2em;-->
+    <!--display: inline-block;-->
+    <!--color: #fff;-->
+    <!--background-color: #4fc08d;-->
+    <!--transition: all 0.15s ease;-->
+    <!--box-sizing: border-box;-->
+    <!--border: 1px solid #4fc08d;-->
+  <!--}-->
 
-  .doc button.alt {
-    color: #42b983;
-    background-color: transparent;
-  }
-</style>
+  <!--.doc button.alt {-->
+    <!--color: #42b983;-->
+    <!--background-color: transparent;-->
+  <!--}-->
+<!--</style>-->
