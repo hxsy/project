@@ -35,7 +35,7 @@
 
 
             <el-col :span="4" style="margin-left: 48vw;margin-top: 30px;">
-                <el-button type="primary" @click="toLogin">登录</el-button>
+                <el-button type="primary" @click="commit">提交信息</el-button>
             </el-col>
 
     </div>
@@ -56,6 +56,14 @@
     methods: {
       toLogin () {
         this.$emit('child-say', '1')
+      },
+      commit () {
+        this.$alert('恭喜注册成功!', '注册信息', {
+          confirmButtonText: '立即登录',
+          callback: action => {
+            this.toLogin()
+          }
+        })
       }
     }
 }
