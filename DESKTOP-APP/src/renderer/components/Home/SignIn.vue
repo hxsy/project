@@ -29,14 +29,11 @@
             </el-col >
 
             <el-col :span="18">
-                <el-select v-model="time" placeholder="请选择">
-                    <el-option
-                            v-for="item in options"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
-                    </el-option>
-                </el-select>
+                <el-input
+                        placeholder="请输入内容"
+                        v-model="classRoom"
+                        clearable>
+                </el-input>
             </el-col>
         </el-row>
 
@@ -82,7 +79,8 @@
           value: '选项5',
           label: '北京烤鸭'
         }],
-        time: ''
+        time: '',
+        classRoom: ''
       }
     }
   }
