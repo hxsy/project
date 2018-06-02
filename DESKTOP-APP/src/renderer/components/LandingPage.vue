@@ -33,6 +33,13 @@
 
     <div style="width: 60vw;margin-left: 20vw;text-align:center;height: 3px;background-color: gray;"></div>
 
+    <el-switch style="margin-top: 50px;margin-left: 45vw;width: 30vw;font-weight: bold"
+            v-model="stuOrTeac"
+            active-text="教师登录"
+            inactive-text="学生登录">
+    </el-switch>
+
+
 
     <div style="margin-top: 50px;margin-left: 35vw;width: 30vw;font-weight: bold">
       <el-input placeholder="请输入邮箱" v-model="email">
@@ -68,6 +75,7 @@
 
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
+  import axios from 'axios'
 
   export default {
     name: 'landing-page',
@@ -75,7 +83,8 @@
     data: function () {
       return {
         email: '',
-        password: ''
+        password: '',
+        stuOrTeac: false
       }
     },
     methods: {
@@ -86,7 +95,14 @@
         this.$emit('child-say', '2')
       },
       login () {
-        this.$emit('to-home', '3')
+        var qs = require('qs')
+        axios.post('172.21.11.90:8080/sas-manager-web/login', qs.stringify({
+          username: 'xie'
+        }))
+          .then(function (response) {
+            alert(response['data']['Success'])
+            this.$emit('to-home', '3')
+          })
       }
     }
   }
