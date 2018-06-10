@@ -52,10 +52,11 @@
         <template slot="prepend" >密码：</template>
       </el-input>
     </div>
-
+    <span v-html="isLogin"></span>
 
     <el-row style="margin-top:30px;margin-left:40vw;text-align: center">
       <el-col :span="4">
+
         <el-button type="primary" @click="login">登录</el-button>
       </el-col>
 
@@ -82,6 +83,7 @@
     components: { SystemInformation },
     data: function () {
       return {
+        isLogin: '',
         email: '',
         password: '',
         stuOrTeac: false
@@ -95,13 +97,17 @@
         this.$emit('child-say', '2')
       },
       login () {
+        var self = this
         var qs = require('qs')
-        axios.post('172.21.11.90:8080/sas-manager-web/login', qs.stringify({
-          username: 'xie'
+        axios.post('http://172.21.11.105:8080/sas-manager-web/login', qs.stringify({
+          username: self.email,
+          password: self.password
         }))
           .then(function (response) {
-            alert(response['data']['Success'])
-            this.$emit('to-home', '3')
+            self.isLogin = response.data[0]
+            if (self.isLogin === 'success') {
+              this.$emit('to-home', '3')
+            }
           })
       }
     }
@@ -109,6 +115,7 @@
 </script>
 
 <!--<style>-->
+<!--//this.$emit('to-home', '3')-->
   <!--@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');-->
 
   <!--* {-->
